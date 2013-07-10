@@ -3,6 +3,7 @@ TodoApp::Application.routes.draw do
   resources :todos
   resources :contacts
   post '/todos/:id/add_contact' => 'todos#add_contact', as: 'add_todo_contact'
+  post '/todos/:id/remove_contact' => 'todos#remove_contact', as: 'remove_todo_contact'
   get '/corporate_about' => 'welcome#about', as: 'aboot'
   # get '/todos' => 'todos#index', as: 'dogs'
   # post '/todos' => 'todos#create'

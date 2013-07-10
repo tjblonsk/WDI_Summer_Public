@@ -14,6 +14,18 @@ class TodosController < ApplicationController
     redirect_to todo
   end
 
+  def remove_contact
+    todo = Todo.find(params[:id])
+    # SELECT * FROM TODOS WHERE id = params[:id]
+
+    contact = Contact.find(params[:contact_id])
+    # SELECT * FROM CONTACTS WHERE id = params[:contact_id]
+    todo.contacts.destroy(contact)
+
+    redirect_to todo
+  end
+
+
   def index
     @todos = Todo.all
   end
