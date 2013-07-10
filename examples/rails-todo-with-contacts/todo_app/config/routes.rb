@@ -1,5 +1,6 @@
 TodoApp::Application.routes.draw do
   root :to => 'welcome#index'
+  get '/todos/search' => 'todos#search', as: 'todos_search'
   resources :todos
   resources :contacts
   post '/todos/:id/add_contact' => 'todos#add_contact', as: 'add_todo_contact'
