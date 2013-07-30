@@ -7,7 +7,7 @@ var word = {
   // Selects a random word from the word list sets the secret word
   setSecretWord: function(){
 
-  this.secretWord = this.wordList[_.random(this.wordList.length - 1)];
+    this.secretWord = this.wordList[_.random(this.wordList.length - 1)];
   },
 
 
@@ -38,7 +38,7 @@ var player = {
 
   // Takes a new letter as input and updates the game
   makeGuess: function(letter){
-  player.guessedLetters.push(letter);
+  this.guessedLetters.push(letter);
   },
 
   // Check if the player has won and end the game if so
@@ -65,12 +65,12 @@ var game = {
     player.guessedLetters = [];
   },
 
-  // Reveals the answer to the secret word and ends the game
-  giveUp: function(){
-    alert("game over, secret word is:" word.SecretWord);
-    word.setSecretWord();
-    player.guessedLetters = [];
-  },
+  // // Reveals the answer to the secret word and ends the game
+  // giveUp: function(){
+  //   alert("game over, secret word is:" word.SecretWord);
+  //   word.setSecretWord();
+  //   player.guessedLetters = [];
+  // },
 
   // Update the display with the parts of the secret word guessed, the letters guessed, and the guesses remaining
   updateDisplay: function(secretWordWithBlanks, guessedLetters, guessesLeft){
