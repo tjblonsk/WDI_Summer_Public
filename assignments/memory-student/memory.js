@@ -22,17 +22,36 @@ var lastId = '',
 
 //Code In Here gets executed once code is ready. ie hovering, clicking events//
 $(function() {
-
+  $('#small').click(startGame);
 });
+
 
 // Initializes the game and creates the board
 function startGame() {
-
+for (var i = 0; i < lettersSmall.length; i++) {
+  $('#game').append('<div class="column" id =' + i + '>' + '</div>');
+   $('#' + i).click(cardClick);
+ }
 }
 
 // Flips a card and checks for a match
 function cardClick() {
-
+  lastId = $(this).attr('id');
+  lastCard = $(this).text(lettersSmall[lastId]);
+  console.log(lastId);
+  console.log(lastCard);
+ if (lastCard === lettersSmall[$(this).attr('id')] && lastId !== $(this).attr('id')) {
+          $('#' +lastId).addClass('found');
+          $(this).addClass('found');
+          lastId = "";
+          if ($('.found').length === 10) {
+              $('#game div').addClass('won');
+          }
+      } else {
+          $('#' + lastId).text(' ');
+          lastId = $(this).attr('id');
+          lastCard = lettersSmall[$(this).attr('id')];
+      }
 }
 
 //Add hoverclass to cards.
@@ -49,3 +68,4 @@ function startTime() {
 function updateTime() {
 
 }
+

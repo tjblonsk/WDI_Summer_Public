@@ -12,12 +12,19 @@
 
 ### To do:
 * Get the game to populate the DOM with 10 cards when the "small" button is clicked.
+
 * Make sure each card is assigned a unique ID so it can be mapped to a letter.
+
 * Implement click functionality so that when a player clicks on the card, it reveals the letter.
+
 * Add logic that compares the cards to try to find a match
+
 * Make sure if you click the same card twice it doesn't mistakenly think it is a match!
+
 * Add styling for "found", "won", and "hover"
+
 * Give the player the option to play a game that is small, medium or large.
+
 * Add a game timer. It should stop when the player wins.
 
 ### Bonus:
