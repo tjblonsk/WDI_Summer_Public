@@ -41,8 +41,10 @@ function cardClick() {
   console.log(lastId);
   console.log(lastCard);
  if (lastCard === lettersSmall[$(this).attr('id')] && lastId !== $(this).attr('id')) {
-          $('#' +lastId).addClass('found');
+          $('#' + lastId).addClass('found');
           $(this).addClass('found');
+          $('#' + lastId).text(lettersSmall[lastId]);
+          $(this).text(lettersSmall[lastId]);
           lastId = "";
           if ($('.found').length === 10) {
               $('#game div').addClass('won');
