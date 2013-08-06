@@ -4,4 +4,7 @@
 
 // STEP 28: Use the HTML `data-id` attribute to find the task in the DOM
 
+
 // STEP 29: Move the task to the `completed-items` list
+
+$('#completed-items').append($("li[data-id=<%=@task.id%>]"));
