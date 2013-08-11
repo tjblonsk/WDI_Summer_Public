@@ -31,14 +31,12 @@ var appendTask = function(task){
 	completeButton.click(function(){
 		$.ajax({
 			// STEP 24: Make the step 15 `.click()` make an ajax call to the `complete` action and set the `dataType` setting to `script`
-<<<<<<< HEAD
+
 		url: '/complete/' + task.id,
 		type: 'put',
 		dataType: 'script'
 		});
-=======
-		})
->>>>>>> upstream/master
+
 	});
 
 	// Handles the click event on the delete button using Ajax
@@ -48,11 +46,9 @@ var appendTask = function(task){
 			url: '/destroy/' + task.id,
 			type: 'delete'
 			// Step 30: Make the step 15 `deleteButton.click()` make an ajax call to the `TasksController#destroy` action and set the `dataType` setting to `script`
-<<<<<<< HEAD
+
 		});
-=======
-		})
->>>>>>> upstream/master
+
 	});
 
 	// STEP 13: Set the htmlTask elements `data-id` attribute to the tasks id
